@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvID_dialogo2"
+        android:layout_width="64dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="4dp"
+        android:text="ID Cofrade"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/etIDcofrade_dialogo_permiso"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNombre_dialogo2"
+        android:layout_width="72dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="4dp"
+        android:text="Nivel Permiso"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/etNivelPermiso_dialogo_permiso"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPrimerApellido_dialogo2"
+        android:layout_width="75dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="192dp"
+
+        android:layout_marginEnd="4dp"
+        android:text="Correo   Electronico"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/etCorreo_dialogo_permiso"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_ModificarCofradePermiso_Cancelar"
+        android:layout_width="80dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="48dp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/baseline_cancel_presentation_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_Ensayos_Guardar"
+        app:layout_constraintTop_toBottomOf="@+id/etCorreo_dialogo_permiso" />
+
+    <Button
+        android:id="@+id/btn_ModificarCofradePermiso_Guardar"
+        android:layout_width="83dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/baseline_save_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="45dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ModificarCofradePermiso_Cancelar"
+        app:layout_constraintTop_toBottomOf="@+id/etCorreo_dialogo_permiso" />
+
+    <EditText
+        android:id="@+id/etIDcofrade_dialogo_permiso"
+        android:layout_width="211dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="31dp"
+        android:ems="10"
+        android:hint="ID COFRADE"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textColorHint="#2F2F2F"
+        app:layout_constraintBottom_toTopOf="@+id/etCorreo_dialogo_permiso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etCorreo_dialogo_permiso"
+        android:layout_width="208dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="CORREO ELECTRONICO"
+        android:inputType="text|textEmailAddress"
+        android:textColor="#000000"
+        android:textColorHint="#2F2F2F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNivelPermiso_dialogo_permiso"
+        android:layout_width="208dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="NIVEL PERMISO"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textColorHint="#2F2F2F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_dialogoModificarPermisosCofrades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

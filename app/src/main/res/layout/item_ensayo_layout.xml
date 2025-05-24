@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvNumeroEnsayoCofrade_Ensayo_Dato"
+        android:layout_width="43dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Nº    Ensayo"
+        app:layout_constraintStart_toEndOf="@+id/tvSegundoApellido_Ensayo_Dato"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSegundoApellido_Ensayo_Dato"
+        android:layout_width="85dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Segundo Apellido"
+        app:layout_constraintStart_toEndOf="@+id/tvPrimerApellido_Ensayo_Dato"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Segundo Apellido" />
+
+    <TextView
+        android:id="@+id/tvIdCofrade_Ensayo_Dato"
+        android:layout_width="45dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNombreCofrade_Ensayo_Dato"
+        android:layout_width="74dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Nombre"
+        app:layout_constraintStart_toEndOf="@+id/tvIdCofrade_Ensayo_Dato"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPrimerApellido_Ensayo_Dato"
+        android:layout_width="80dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Primer Apellido"
+        app:layout_constraintStart_toEndOf="@+id/tvNombreCofrade_Ensayo_Dato"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Primer Apellido" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

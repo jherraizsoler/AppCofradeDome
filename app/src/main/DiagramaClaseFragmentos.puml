@@ -1,0 +1,325 @@
+@startuml
+' Configuración opcional para la dirección del diagrama
+top to bottom direction
+
+' Definición de la clase DatosTarjetasCofrades
+' Los campos (atributos) se definen con un signo (+ para público, - para privado, # para protegido)
+' Puedes poner el tipo de dato después de dos puntos (:)
+' Los métodos (funciones) se definen también con un signo y paréntesis para los argumentos
+
+' ********      A P P  *****************
+class LoginActivity{
+    - clienteSSL: ClienteSSL
+    - LoginExecutor: Executor
+    - miImageView: ImageView
+    - btn_login: Button
+    - btn_Huella: Button
+    - et_correoElectronico: EditText
+    - et_contraseña: EditText
+    - tv_feedback: TextView
+    - dialogoHelper: crearDialogoConfirmacion
+    - contraseñaDefault: String
+    --
+    + onCreate(savedInstanceState: Bundle)
+    + hashPassword(password: String)
+    + onResume()
+    + obtenerColorPrincipalDesdeNombre(nombreColor: String): Int
+    + obtenerColorFondoDesdeNombre(nombreColor: String): Int
+    + obtenerImagenLogoDesdeNombre(nombreColor: String)
+    + obtenerFuenteDesdeNombre(nombreFuente: String): Typeface
+    + showBiometricPrompt()
+    + showToast(menssage: String)
+    + saveEncryptedEmail(email: String)
+    + updateBiometricButtonVisibility()
+    + fetchUserPermission(email: String)
+    + navigateToMainApp(idCofrade: Int, permiso: Int, email: String)
+}
+
+class CrearPasswordActivity{
+    - clienteSSL: ClienteSSL
+    - mainExecutor: Executor
+    - CambiarPasswordExecutor: MiExecutorTask
+    - idCofrade: Int
+    - etContraseña: EditText
+    - etContraseñaRepetir: EditText
+    - tvContraseña: TextView
+    - permisoUsuario
+    - correoElectronico: String
+    - btn_Guardar: Button
+    - contraseñaDefault: String
+    --
+    + onCreate(savedInstanceState: Bundle)
+    + hashPassword(password: String): String
+    + verificarContraseña(contraseña: String): String
+    + onResume()
+    + obtenerColorPrincipalDesdeNombre(nombreColor: String): Int
+    + obtenerColorFondoDesdeNombre(nombreColor: String): Int
+    + obtenerFuenteDesdeNombre(nombreFuente: String): Typeface
+}
+
+class MainActivity{
+    + myViewPagerAdapter: MyViewPagerAdapter?
+    - clienteSSL: ClienteSSL
+    - mainExecutor: Executor
+    + idCofrade: Int
+    + permisoUsuario: Int
+    + correoElectronico: String
+    - toolbar: Toolbar
+    - tabLayout: TabLayout
+    + lanzadorCambiarContraseña: ActivityResultLauncher<Intent>
+    + colorPrincipal: String
+    + fuenteEncabezados: Typeface
+    + fuenteDatos: Typeface
+    + fuenteFeedback: Typeface
+    + fuenteBotones: Typeface
+    - pagerAdapter: AdaptadorFragmentos
+    --
+    onCreate(savedInstanceState: Bundle?)
+    onCreateOptionsMenu(menu: Menu): Boolean
+    onOptionsItemSelected(item: MenuItem): Boolean
+    configurarTabLayout(numeroPermiso: Int)
+    onClick(v: View)
+    onRespuestaRecibida(respuesta: String)
+    onResume()
+    restaurarUltimaPestaña(indicePestaña: Int)
+    obtenerColorPrincipalDesdeNombre(nombreColor: String): Int
+    obtenerColorFondoDesdeNombre(nombreColor: String): Int
+    cambiarLogoToolbarDesdeNombre(nombreColor: String)
+    obtenerFuenteDesdeNombre(nombreFuente: String?): Typeface
+}
+
+class PreferenciasActivity{
+    - spColoresPrincipal: Spinner
+    - spFuentesEncabezados: Spinner
+    - spFuentesDatos: Spinner
+    - spFuentesFeedback: Spinner
+    - spFuentesBotones: Spinner
+    - btn_Guardar: Button
+    - btn_Cancelar: Button
+    - miImageView: ImageView
+    - tv_Colores: TextView
+    - tv_Fuentes: TextView
+    - tv_ColorPrincipal: TextView
+    - tv_FuentesEncabezados: TextView
+    - tv_FuentesDatos: TextView
+    - tv_FuentesFeedback: TextView
+    - tv_FuentesBotones: TextView
+    - sharedPreferences: SharedPreferences
+    - editor: SharedPreferences.Editor
+    - ultimaPestaña: Int
+    - permisosUsuario: Int
+    --
+    onCreate(savedInstanceState: Bundle?)
+    - obtenerListaColores(): List<String>
+    - obtenerListaFuentesEncabezados(): List<String>
+    - obtenerListaFuentesDatos(): List<String>
+    - obtenerListaFuentesFeedback(): List<String>
+    - obtenerListaFuentesBotones(): List<String>
+    - cargarPreferencias()
+    - seleccionarSpinner(spinner: Spinner, valor: String)
+    onResume()
+    - funcionamientoBotonGuardar()
+    - obtenerFuenteDesdeNombre(nombreFuente: String?): Typeface
+    - funcionamientoBotonCancelar()
+    - obtenerColorPrincipalDesdeNombre(nombreColor: String): Int
+    - obtenerColorFondoBotonesDesdeNombre(nombreColor: String): Int
+    - obtenerImagenLogoDesdeNombre(nombreColor: String)
+    - obtenerColorFondoDesdeNombre(nombreColor: String): Int
+}
+
+class MasInformacionActivity{
+    - btn_Contacto:Button?
+    - btn_LeerMas:Button?
+    - btn_Cancelar:Button
+    - logo: ImageView
+    - dialogoHelper: crearDialogoConfirmacion
+    --
+    onCreate(savedInstanceState: Bundle?)
+    onResume()
+    - obtenerColorPrincipalDesdeNombre(nombreColor: String): Int
+    - obtenerColorFondoDesdeNombre(nombreColor: String): Int
+    - obtenerImagenLogoDesdeNombre(nombreColor: String)
+    - obtenerFuenteDesdeNombre(nombreFuente: String?): Typeface
+}
+
+class LeerMas_MasInformacionActivity{
+    - btn_Cancelar: Button
+    --
+    onCreate(savedInstanceState: Bundle?)
+    - obtenerColorFondoDesdeNombre(nombreColor: String): Int
+    onResume()
+}
+
+class CambiarPasswordActivity{
+    - clienteSSL: ClienteSSL
+    - mainExecutor: Executor
+    - CambiarPasswordExecutor: MiExecutorTask
+    - etContraseña: EditText
+    - etContraseñaRepetir: EditText
+    - tvContraseña: TextView
+    - permisoUsuario: Int
+    - correoElectronico: String
+    - btn_Guardar: Button
+    - btn_Cancelar: Button
+    --
+    onCreate(savedInstanceState: Bundle?)
+    - hashPassword(password: String): String
+    - verificarContraseña(contraseña: String): String
+    onResume()
+    - obtenerColorPrincipalDesdeNombre(nombreColor: String): Int
+    - obtenerColorFondoDesdeNombre(nombreColor: String): Int
+    - obtenerFuenteDesdeNombre(nombreFuente: String?): Typeface
+}
+
+class AdaptadorFragmentos{
+    - titulos: Array<String> = emptyArray()
+    --
+    - establecerTitulos()
+    getItem(position: Int): Fragment
+    getCount(): Int
+    getPageTitle(position: Int): CharSequence
+}
+
+class MyViewPagerAdapter{
+    createFragment(position: Int): Fragment
+    getItemCount(): Int
+}
+
+class ClienteSSL{
+    respuestaServidor: String
+    - sslSocketFactory: SSLSocketFactory
+    --
+    enviarComandoSync(comando: String): String
+    ClienteTCPCallback
+}
+
+class CrearDialogoConfirmacion{
+    --
+    mostrarDialogoOk(
+            context: Context,
+            tituloDialogo: String,
+            tituloMensaje: String,
+            Mensaje: String,
+            textoBotonPositivo: String,
+            onConfirmar: () -> Unit,
+        )
+    mostrarDialogoConfirmarCancelar(
+            context: Context,
+            tituloDialogo: String,
+            pregunta: String,
+            textoDatos: String,
+            textoBotonPositivo: String,
+            textoBotonNegativo: String,
+            onConfirmar: () -> Unit,
+            onCancelar: () -> Unit
+        )
+    mostrarDialogoConInput(
+            context: Context,
+            tituloDialogo: String,
+            mensaje: String,
+            hintTexto: String,
+            textoBotonPositivo: String,
+            textoBotonNegativo: String,
+            onNumeroIngresado: (Int) -> Unit,
+            onCancelar: () -> Unit
+        )
+}
+
+class EmailEncrypter{
+    - ANDROID_KEYSTORE
+    - KEY_ALIAS
+    - CIPHER_ALGORITHM
+    - GCM_TAG_LENGTH
+    --
+    isKeyGenerated(context: Context?): Boolean
+    encryptEmail(context: Context?, email: String): String
+    decryptEmail(context: Context?, encryptedEmailBase64: String?): String
+    generateKey(context: Context?)
+}
+
+class MiExecutorTask{
+     - cliente: ClienteSSL
+     - callback: MiExecutorTaskCallback
+     - mainExecutor: Executor
+     - backgroundExecutor: Executor
+     MiExecutorTaskCallback
+     - handler
+    --
+     ejecutar(comando: String)
+     execute(r: Runnable)
+
+}
+
+'top to bottom direction
+' * * * * * * * * *     C O F R A D E     * * * * * * * * * *
+
+class DatosCofrades{
+    + id: Int
+    + nombre: String
+    + primerApellido: String
+    + segundoApellido: String
+    --
+    get, setters, tostring()
+}
+
+class AdaptadorCofrades{
+    - contexto: Context
+    - lista: ArrayList<DatosCofrade>
+    - escuchador: View.OnClickListener
+    - fuenteDatos: Typeface
+    --
+    + setFuenteDatos(fuenteDatos: Typeface?)
+    + MiContenedor(itemview: View) : RecyclerView.ViewHolder(itemview)
+    + onCreateViewHolder(parent: ViewGroup, viewType: Int): MiContenedor
+    + onClick(view: View)
+    + onBindViewHolder(holder: MiContenedor, position: Int)
+    + getItemCount(): Int
+}
+
+class DialogoModificarDatosCofrade{
+
+    --
+}
+
+class AltaCofradeActivity{
+
+    --
+}
+
+class DAOCofradesFragment{
+
+    --
+}
+
+
+class DatosTarjetasCofrades {
+    + id: Int
+    + nombre: String
+    + numHermano: Int
+    + estado: String
+    + tipo: String
+    + direccion: String
+    + telefono: String
+    + email: String
+    + fechaNacimiento: String
+    + fechaAlta: String
+    + estadoCivil: String
+    + profesion: String
+    + isActivo: Boolean
+    --
+    + constructor(id: Int, nombre: String, ...)
+    + toString(): String
+}
+ class Cofrade {
+    + idCofrade: Int
+    + nombre: String
+    + apellidos: String
+    + passwordHash: String
+    + email: String
+ }
+
+ Cofrade "1" -- "*" DatosTarjetasCofrades : "tiene"
+
+left to right direction
+
+@enduml

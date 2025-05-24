@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_BackgroundEncabezadosEnsayo"
+        android:layout_width="351dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#D7D0ED"
+        android:includeFontPadding="false"
+        app:cornerRadius="20dp"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView_gestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoSegundoApellido_Ensayo"
+        android:layout_width="76dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Segundo Apellido"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvEncabezadoPrimerApellido_Ensayo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoIDCofrade_Ensayo"
+        android:layout_width="36dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="0.7"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="ID"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:autoSizeTextType="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEnsayoNormalesMinimos"
+        android:layout_width="191dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp"
+        android:text="Ensayos normales minimos:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_Ensayos" />
+
+    <TextView
+        android:id="@+id/tvEnsayoNormalesMaximos"
+        android:layout_width="189dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="56dp"
+        android:text="Ensayos normales maximos:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_Ensayos" />
+
+    <TextView
+        android:id="@+id/tvNumeroEnsayosNormalesMaximos"
+        android:layout_width="59dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="56dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tvEnsayoNormalesMaximos"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_Ensayos" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoNombre_Ensayo"
+        android:layout_width="74dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Nombre"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvEncabezadoIDCofrade_Ensayo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNumeroEnsayosNormalesMinimos"
+        android:layout_width="59dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="56dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvEnsayoNormalesMinimos"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_Ensayos" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoNumeroEnsayos_Ensayo"
+        android:layout_width="68dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="0.7"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="Nº\nEnsayos"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:autoSizeTextType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvEncabezadoSegundoApellido_Ensayo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoPrimerApellido_Ensayo"
+        android:layout_width="83dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Primer Apellido"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvEncabezadoNombre_Ensayo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Ensayo_CambiarNumeroEnsayosNormales"
+        android:layout_width="181dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif"
+        android:text="Cambiar Numero Ensayos Normales"
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnsayoNormalesMaximos" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_Ensayos"
+        android:layout_width="339dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEncabezadoPrimerApellido_Ensayo" />
+
+    <TextView
+        android:id="@+id/tvFeedback_Ensayo"
+        android:layout_width="261dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="12dp"
+        android:text="Haga click en un registro"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Ensayo_CambiarNumeroEnsayosNormales" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

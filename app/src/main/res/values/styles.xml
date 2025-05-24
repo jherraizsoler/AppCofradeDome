@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //Botones
+    <style name="AlertDialogButtonStyleMorado" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/Color_Principal_Morado</item>
+    </style>
+
+    <style name="AlertDialogButtonStyleVerde" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/Color_Principal_Verde</item>
+    </style>
+
+    <style name="AlertDialogButtonStyleRojo" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/Color_Principal_Rojo</item>
+    </style>
+
+    <style name="AlertDialogButtonStyleNaranja" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/Color_Principal_Naranja</item>
+    </style>
+
+    <style name="AlertDialogButtonStyleAzul" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/Color_Principal_Azul</item>
+    </style>
+
+
+    //Estilos dialogos
+    <style name="AlertDialogThemeMorado" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="buttonBarButtonStyle">@style/AlertDialogButtonStyleMorado</item>
+        <item name="android:windowBackground">@color/Color_fondo_Morado</item>
+    </style>
+
+
+    <style name="AlertDialogThemeVerde" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="buttonBarButtonStyle">@style/AlertDialogButtonStyleVerde</item>
+        <item name="android:windowBackground">@color/Color_fondo_Verde</item>
+    </style>
+
+    <style name="AlertDialogThemeRojo" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="buttonBarButtonStyle">@style/AlertDialogButtonStyleRojo</item>
+        <item name="android:windowBackground">@color/Color_fondo_Rojo</item>
+    </style>
+
+    <style name="AlertDialogThemeNaranja" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="buttonBarButtonStyle">@style/AlertDialogButtonStyleNaranja</item>
+        <item name="android:windowBackground">@color/Color_fondo_Naranja</item>
+    </style>
+
+    <style name="AlertDialogThemeAzul" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="buttonBarButtonStyle">@style/AlertDialogButtonStyleAzul</item>
+        <item name="android:windowBackground">@color/Color_fondo_Azul</item>
+    </style>
+</resources>

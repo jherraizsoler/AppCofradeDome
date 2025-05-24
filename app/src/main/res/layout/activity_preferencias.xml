@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:textAlignment="center"
+    tools:layout_editor_absoluteX="-112dp"
+    tools:layout_editor_absoluteY="-3dp">
+
+
+    <TextView
+
+        android:id="@+id/tv_fuentes_titulo"
+
+        android:layout_width="297dp"
+
+        android:layout_height="30dp"
+
+        android:layout_marginTop="13dp"
+
+        android:background="@drawable/rounded_corners_background"
+
+        android:backgroundTint="#673AB7"
+        android:fontFamily="@font/unbounded_medium"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Fuentes:"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_colores_principal" />
+
+    <TextView
+
+        android:id="@+id/tv_fuente_encabezados"
+
+        android:layout_width="123dp"
+
+        android:layout_height="21dp"
+
+        android:layout_marginStart="32dp"
+
+        android:layout_marginTop="24dp"
+
+        android:fontFamily="@font/unbounded_medium"
+
+        android:text="Encabezados"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fuentes_titulo" />
+
+    <Spinner
+
+        android:id="@+id/sp_fuentes_botones"
+
+        android:layout_width="150dp"
+
+        android:layout_height="53dp"
+
+        android:layout_marginTop="24dp"
+
+        android:layout_marginEnd="32dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fuente_feedback" />
+
+    <Spinner
+
+        android:id="@+id/sp_fuentes_encabezados"
+
+        android:layout_width="152dp"
+
+        android:layout_height="48dp"
+
+        android:layout_marginTop="52dp"
+
+        android:layout_marginEnd="32dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/tv_fuentes_titulo" />
+
+    <Spinner
+
+        android:id="@+id/sp_fuentes_feedback"
+
+        android:layout_width="151dp"
+
+        android:layout_height="53dp"
+
+        android:layout_marginTop="28dp"
+
+        android:layout_marginEnd="32dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/tv_fuente_datos" />
+
+    <TextView
+
+        android:id="@+id/tv_fuente_feedback"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="32dp"
+
+        android:layout_marginTop="48dp"
+
+        android:fontFamily="@font/unbounded_medium"
+
+        android:text="Feedback"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fuente_datos" />
+
+    <TextView
+
+        android:id="@+id/tv_fuente_datos"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="32dp"
+
+        android:layout_marginTop="44dp"
+
+        android:fontFamily="@font/unbounded_medium"
+
+        android:text=" Datos"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fuente_encabezados" />
+
+    <Spinner
+
+        android:id="@+id/sp_fuentes_datos"
+
+        android:layout_width="151dp"
+
+        android:layout_height="50dp"
+
+        android:layout_marginTop="36dp"
+
+        android:layout_marginEnd="32dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/tv_fuente_encabezados" />
+
+    <TextView
+
+        android:id="@+id/tv_fuente_botones"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="32dp"
+
+        android:layout_marginTop="44dp"
+
+        android:fontFamily="@font/unbounded_medium"
+
+        android:text="Botones"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fuente_feedback" />
+
+    <TextView
+
+        android:id="@+id/tv_colores_principal"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="32dp"
+
+        android:layout_marginTop="24dp"
+
+        android:fontFamily="@font/unbounded_medium"
+
+        android:text="Color Principal"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_colores_titulo" />
+
+
+    <Spinner
+
+        android:id="@+id/sp_colores_principal"
+
+        android:layout_width="154dp"
+
+        android:layout_height="49dp"
+
+        android:layout_marginTop="52dp"
+
+        android:layout_marginEnd="32dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenLogo" />
+
+
+    <TextView
+
+        android:id="@+id/tv_colores_titulo"
+
+        android:layout_width="295dp"
+
+        android:layout_height="30dp"
+
+        android:layout_marginTop="4dp"
+
+        android:background="@drawable/rounded_corners_background"
+
+        android:backgroundTint="@color/Color_Principal_Morado"
+
+        android:fontFamily="@font/unbounded_medium"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Colores:"
+        android:textColor="#F8F8F8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenLogo" />
+
+
+    <ImageView
+
+        android:id="@+id/imagenLogo"
+
+        android:layout_width="67dp"
+
+        android:layout_height="61dp"
+
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <Button
+        android:id="@+id/btn_preferencias_Morado_Guardar"
+        android:layout_width="137dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:text="GUARDAR"
+        app:cornerRadius="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_fuentes_botones" />
+
+    <Button
+        android:id="@+id/btn_preferencias_Morado_cancelar"
+        android:layout_width="137dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="32dp"
+        android:text="CANCELAR"
+        app:cornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_fuentes_botones" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
