@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity"
+    tools:layout_editor_absoluteX="-7dp"
+    tools:layout_editor_absoluteY="0dp">
+
+
+    <Button
+        android:id="@+id/btn_BackgroundEncabezadosGestion"
+        android:layout_width="352dp"
+        android:layout_height="54dp"
+        android:backgroundTint="#EDD9D0"
+        android:includeFontPadding="false"
+        app:cornerRadius="20dp"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView_gestion"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="4dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_gestion"
+        android:layout_width="358dp"
+        android:layout_height="183dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEncabezadoPrimerApellido_Cofrade" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoSegundoApellido_Cofrade"
+        android:layout_width="104dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Segundo Apellido"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvEncabezadoPrimerApellido_Cofrade"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_gestion_GenerarTarjetas"
+        android:layout_width="142dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="sans-serif"
+        android:text=" "
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/ic_generador_tarjetas_foreground"
+        app:iconGravity="textStart"
+        app:iconSize="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_gestion_Consultar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_gestion_AltaFormulario"
+        android:layout_width="153dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/baseline_person_add_alt_1_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_gestion" />
+
+    <Button
+        android:id="@+id/btn_gestion_Eliminar"
+        android:layout_width="159dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:text="  "
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/baseline_person_remove_alt_1_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_gestion_AltaFormulario"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_gestion" />
+
+    <Button
+        android:id="@+id/btn_gestion_Consultar"
+        android:layout_width="153dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif"
+        android:text="  "
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/article_person_24px"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_gestion_AltaFormulario" />
+
+    <Button
+        android:id="@+id/btn_gestion_Actualizar"
+        android:layout_width="159dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="  "
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/person_edit_24px"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.959"
+        app:layout_constraintStart_toEndOf="@+id/btn_gestion_Consultar"
+        app:layout_constraintTop_toBottomOf="@+id/btn_gestion_Eliminar" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoNombre_Cofrade"
+        android:layout_width="75dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="216dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Nombre"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvEncabezadoIDCofrade_Cofrade"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoPrimerApellido_Cofrade"
+        android:layout_width="97dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Primer Apellido"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvEncabezadoNombre_Cofrade"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoIDCofrade_Cofrade"
+        android:layout_width="66dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="0.7"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="ID"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:autoSizeTextType="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFeedBack"
+        android:layout_width="203dp"
+        android:layout_height="90dp"
+        android:text="Comprobación: "
+        android:textAlignment="textStart"
+        app:autoSizeMaxTextSize="16sp"
+        app:autoSizeMinTextSize="13sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_gestion_GenerarTarjetas"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

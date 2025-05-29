@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity">
+
+    <Button
+        android:id="@+id/btn_Admin_RestablecerPassword"
+        android:layout_width="239dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="4dp"
+        android:text="Restablece contraseña"
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Admin_Consultar" />
+
+    <Button
+        android:id="@+id/btn_BackgroundEncabezadosAdmin"
+        android:layout_width="351dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#D7D0ED"
+        android:includeFontPadding="false"
+        app:cornerRadius="20dp"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView_gestion"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="4dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_admin"
+        android:layout_width="360dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEncabezadoNivelPermiso_CofradePermisos" />
+
+    <Button
+        android:id="@+id/btn_Admin_Eliminar"
+        android:layout_width="159dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/remove_moderator_24px"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_Admin_AltaFormulario"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_admin" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoFechaRegistro_CofradePermisos"
+        android:layout_width="81dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Fecha\nRegistro"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvEncabezadoNivelPermiso_CofradePermisos"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Admin_Actualizar"
+        android:layout_width="157dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="7dp"
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/edit_note_24px"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Admin_RestablecerPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Admin_Eliminar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoIDCofrade_CofradePermisos"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="ID\nCofrade"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvEncabezadoIDCofradePermiso_CofradePermisos"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoIDCofradePermiso_CofradePermisos"
+        android:layout_width="26dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="0.7"
+        android:gravity="center"
+        android:text="ID"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:autoSizeTextType="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Admin_Consultar"
+        android:layout_width="153dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/menu_book_24px"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Admin_Actualizar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Admin_AltaFormulario" />
+
+    <Button
+        android:id="@+id/btn_Admin_AltaFormulario"
+        android:layout_width="153dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/add_moderator_24px"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_admin" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoNivelPermiso_CofradePermisos"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Nivel\nPermiso"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvEncabezadoIDCofrade_CofradePermisos"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoCorreoElectronico_CofradePermisos"
+        android:layout_width="82dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Email"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvEncabezadoFechaRegistro_CofradePermisos"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFeedBack"
+        android:layout_width="256dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="60dp"
+        android:text="Comprobación: "
+        android:textAlignment="viewStart"
+        app:autoSizeMaxTextSize="16sp"
+        app:autoSizeMinTextSize="13sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Admin_RestablecerPassword"
+        app:layout_constraintVertical_bias="0.05" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

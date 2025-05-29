@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/encabezado_permisocofrades"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvEncabezadoIDCofradePermiso_Permiso"
+        android:layout_width="5dp"
+        android:layout_height="85dp"
+        android:layout_weight="0.4"
+        android:gravity="center"
+        android:text="ID Cofrade Permiso"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:autoSizeTextType="none" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoIdCofrade_Permiso"
+        android:layout_width="13dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:text="ID Cofrade"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoNivelPermisoCofrade_Permiso"
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4"
+        android:gravity="center"
+        android:text="Nivel Permiso"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoFechaCofrade_Permiso"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4"
+        android:gravity="center"
+        android:text="Fecha"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoCorreoElectronicoCofrade_Permiso"
+        android:layout_width="9dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6"
+        android:gravity="center"
+        android:text="Correo Electronico"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoCambiarContraseñaCofrade_Permiso"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="Cambiar Contraseña"
+        android:textStyle="bold" />
+
+</LinearLayout>

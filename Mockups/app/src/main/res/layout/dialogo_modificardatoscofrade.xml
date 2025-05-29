@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="-36dp"
+    tools:layout_editor_absoluteY="-9dp">
+
+    <Button
+        android:id="@+id/btn_ModificarCofrade_Guardar"
+        android:layout_width="83dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="28dp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/baseline_save_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="45dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ModificarCofrade_Cancelar"
+        app:layout_constraintTop_toBottomOf="@+id/etSegundoApellido_dialogo" />
+
+    <Button
+        android:id="@+id/btn_ModificarCofrade_Cancelar"
+        android:layout_width="80dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="56dp"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/baseline_cancel_presentation_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_Ensayos_Guardar"
+        app:layout_constraintTop_toBottomOf="@+id/etSegundoApellido_dialogo" />
+
+    <EditText
+        android:id="@+id/etID_dialogo"
+        android:layout_width="186dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="ID"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textColorHint="#2F2F2F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvID_dialogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="56dp"
+        android:text="ID"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/etID_dialogo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etSegundoApellido_dialogo"
+        android:layout_width="178dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:ems="10"
+        android:hint="Segundo Apellido"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#2F2F2F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tvPrimerApellido_dialogo"
+        app:layout_constraintTop_toBottomOf="@+id/etPrimerApellido_dialogo" />
+
+    <EditText
+        android:id="@+id/etPrimerApellido_dialogo"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="28dp"
+        android:ems="10"
+        android:hint="Primer Apellido"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#2F2F2F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etpassword_dialogo" />
+
+    <TextView
+        android:id="@+id/tvPrimerApellido_dialogo"
+        android:layout_width="60dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="192dp"
+
+        android:layout_marginEnd="24dp"
+        android:text="Primer Apellido"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/etPrimerApellido_dialogo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSegundoApellido_dialogo"
+        android:layout_width="60dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="268dp"
+        android:layout_marginEnd="24dp"
+        android:text="Segundo Apellido"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/etSegundoApellido_dialogo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etpassword_dialogo"
+        android:layout_width="187dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#2F2F2F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etID_dialogo" />
+
+    <TextView
+        android:id="@+id/tvNombre_dialogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="32dp"
+        android:text="Nombre"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/etpassword_dialogo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

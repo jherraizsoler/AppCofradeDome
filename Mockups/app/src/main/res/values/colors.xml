@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#746F79</color>
+
+    // Color Principal
+    <color name="Color_Principal_Morado">#7241CD</color>
+    <color name="Color_Principal_Verde">#275A11</color>
+    <color name="Color_Principal_Naranja">#FF8200</color>
+    <color name="Color_Principal_Rojo">#FC0000</color>
+    <color name="Color_Principal_Azul">#1D428B</color>
+
+    // Color Fondo
+    <color name="Color_fondo_Morado">#FCF5FD</color>
+    <color name="Color_fondo_Verde">#F6FDF5</color>
+    <color name="Color_fondo_Naranja">#F6EBE5</color>
+    <color name="Color_fondo_Rojo">#FDF5F5</color>
+    <color name="Color_fondo_Azul">#F5F6FD</color>
+
+
+    // Background Botones
+    <color name="Botones_Background_Morado">#F0E7FA</color>
+    <color name="Botones_Background_Verde">#EAFAE7</color>
+    <color name="Botones_Background_Naranja">#FAEFE7</color>
+    <color name="Botones_Background_Rojo">#FAE7E7</color>
+    <color name="Botones_Background_Azul">#E7ECFA</color>
+
+
+    // Background Encabezados
+    <color name="Encabezado_Background_Morado">#DED0ED</color>
+    <color name="Encabezado_Background_Verde">#D6EDD0</color>
+    <color name="Encabezado_Background_Naranja">#DBC2B7</color>
+    <color name="Encabezado_Background_Rojo">#EDD0D0</color>
+    <color name="Encabezado_Background_Azul">#D7D0ED</color>
+
+</resources>
+
+
+
+
+
+
+
+
+
+
+

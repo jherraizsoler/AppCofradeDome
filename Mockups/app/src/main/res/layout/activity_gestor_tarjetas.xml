@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.GestorTarjetas">
+
+    <TextView
+        android:id="@+id/tvEncabezadoNombreCompleto_Tarjeta"
+        android:layout_width="195dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="32dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Nombre Completo"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvEncabezadoIDCofrade_Tarjeta"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFeedBack_Tarjeta"
+        android:layout_width="305dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="36dp"
+        android:text="Comprobación: "
+        android:textAlignment="center"
+        app:autoSizeMaxTextSize="16sp"
+        app:autoSizeMinTextSize="13sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Cancelar_Tarjeta"
+        app:layout_constraintVertical_bias="0.393" />
+
+    <Button
+        android:id="@+id/btn_Seleccionadas_Tarjeta"
+        android:layout_width="171dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="396dp"
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="SELECCIONADAS"
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_Buscador_Tarjeta"
+        android:layout_width="313dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Buscador (ID o Nombre completo)"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview_Tarjeta" />
+
+    <Button
+        android:id="@+id/btn_Todas_Tarjeta"
+        android:layout_width="114dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="392dp"
+        android:layout_marginEnd="20dp"
+        android:text="TODAS"
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toEndOf="@+id/btn_Seleccionadas_Tarjeta"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoSeleccionado_Tarjeta"
+        android:layout_width="98dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="32dp"
+        android:layout_weight="0.7"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="Seleccionada"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:autoSizeTextType="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEncabezadoIDCofrade_Tarjeta"
+        android:layout_width="65dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="32dp"
+        android:layout_weight="0.7"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="ID"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:autoSizeTextType="none"
+        app:layout_constraintStart_toEndOf="@+id/tvEncabezadoSeleccionado_Tarjeta"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Cancelar_Tarjeta"
+        android:layout_width="142dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="96dp"
+        android:fontFamily="sans-serif"
+        android:text="CANCELAR"
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Seleccionadas_Tarjeta"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_Tarjeta"
+        android:layout_width="358dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEncabezadoNombreCompleto_Tarjeta" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

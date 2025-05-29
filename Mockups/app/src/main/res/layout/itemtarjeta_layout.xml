@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvNombreCompleto_Tarjeta_Dato"
+        android:layout_width="221dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="monospace"
+        android:gravity="center|start"
+        android:text="Segundo Apellido"
+        app:layout_constraintStart_toEndOf="@+id/tvIdCofrade_Tarjeta_Dato"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Segundo Apellido" />
+
+    <TextView
+        android:id="@+id/tvIdCofrade_Tarjeta_Dato"
+        android:layout_width="61dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Id"
+        app:layout_constraintStart_toEndOf="@+id/cb_Seleccion_Tarjeta"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cb_Seleccion_Tarjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

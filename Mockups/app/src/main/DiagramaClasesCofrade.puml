@@ -1,0 +1,297 @@
+@startuml
+' Diagrama de Clases - Módulo Cofrades de CofradeDome
+' Representa la estructura general de la aplicación.
+
+top to bottom direction
+
+' Clases modulo Cofrades
+
+class MainActivity{
+    + myViewPagerAdapter: MyViewPagerAdapter
+    - clienteSSL: ClienteSSL
+    + idCofrade: Int
+    + permisoUsuario: Int
+    + correoElectronico: String
+    - toolbar: Toolbar
+    - tabLayout: TabLayout
+    + lanzadorCambiarContraseña: ActivityResultLauncher<Intent>
+    + colorPrincipal: String
+    + fuenteEncabezados: Typeface
+    + fuenteDatos: Typeface
+    + fuenteFeedback: Typeface
+    + fuenteBotones: Typeface
+    --
+    onCreate(savedInstanceState: Bundle?)
+    onCreateOptionsMenu(menu: Menu): Boolean
+    onOptionsItemSelected(item: MenuItem): Boolean
+    configurarTabLayout(numeroPermiso: Int)
+    onClick(v: View)
+    onRespuestaRecibida(respuesta: String)
+    onResume()
+    restaurarUltimaPestaña(indicePestaña: Int)
+    obtenerColorPrincipalDesdeNombre(nombreColor: String): Int
+    obtenerColorFondoDesdeNombre(nombreColor: String): Int
+    cambiarLogoToolbarDesdeNombre(nombreColor: String)
+    obtenerFuenteDesdeNombre(nombreFuente: String?): Typeface
+}
+
+class MyViewPagerAdapter{
+    createFragment(position: Int): Fragment
+    getItemCount(): Int
+}
+
+class DatosCofrades{
+    + id: Int
+    + nombre: String
+    + primerApellido: String
+    + segundoApellido: String
+    --
+    get, setters, tostring()
+}
+
+class AdaptadorCofrades{
+    - contexto: Context
+    - lista: ArrayList<DatosCofrade>
+    - escuchador: View.OnClickListener
+    - fuenteDatos: Typeface
+    --
+    + setFuenteDatos(fuenteDatos: Typeface?)
+    + MiContenedor(itemview: View) : RecyclerView.ViewHolder(itemview)
+    + onCreateViewHolder(parent: ViewGroup, viewType: Int): MiContenedor
+    + onClick(view: View)
+    + onBindViewHolder(holder: MiContenedor, position: Int)
+    + getItemCount(): Int
+}
+
+class DialogoModificarDatosCofrade{
+    - tvID_Encabezado: TextView
+    - tvNombre_Encabezado: TextView
+    - tvPrimerApellido_Encabezado: TextView
+    - tvSegundoApellido_Encabezado: TextView
+    - etID: EditText
+    - etNombre: EditText
+    - etPrimerApellido: EditText
+    - etSegundoApellido: EditText
+    - listener: DatosCofrade
+    - idInicial
+    - nombreInicial: String
+    - primerApellidoInicial: String
+    - segundoApellidoInicial: String
+    - activity: MainActivity
+    - btn_Guardar: Button
+    - btn_Cancelar: Button
+    --
+    onCreateDialog(savedInstanceState: Bundle?): Dialog
+    setDatos(
+            id: Int,
+            nombre: String?,
+            primerApellidoInicial: String?,
+            segundoApellidoInicial: String?
+        )
+    setDialogoPersonalizadoListener(listener: DatosCofrade?)
+    DatosCofrade
+    setActivity(activity: MainActivity?)
+    obtenerColorPrincipalDesdeNombre(nombreColor: String): Int
+}
+
+class AltaCofradeActivity{
+    - etNombre: EditText
+    - etPrimerApellido: EditText
+    - etSegundoApellido: EditText
+    - btnAlta: Button
+    --
+    onCreate(savedInstanceState: Bundle?)
+    onResume()
+    obtenerColorPrincipalDesdeNombre(nombreColor: String): Int
+    obtenerColorFondoDesdeNombre(nombreColor: String): Int
+    btenerFuenteDesdeNombre(nombreFuente: String?): Typeface
+}
+
+class DAOCofradesFragment{
+      - vistaRecycler: RecyclerView
+      - lista = ArrayList<com.example.CofradeDome.Models.DatosCofrade>()
+      - adaptador: AdaptadorCofrades
+      - dialogoHelper: crearDialogoConfirmacion
+      - tvID_Cabecera: TextView
+      - tvNombre_Cabecera: TextView
+      - tvPrimerApellido_Cabecera: TextView
+      - tvSegundoApellido_Cabecera: TextView
+      - tvFeedback: TextView
+      - lanzadorAlta: ActivityResultLauncher<Intent>
+      - clienteSSL: ClienteSSL
+      - mainExecutor: Executor
+      - gestionExecutor: MiExecutorTask
+      + posicionEdicion: Int
+      + permisoUsuario: Int
+      - activity: MainActivity
+      - fuenteDatos: Typeface?
+      - botonAlta: Button
+      - botonActualizar: Button
+      - botonEliminar: Button
+      - botonConsultar: Button
+      - botonGenerarPDF: Button
+      - botonFondoEncabezados: Button
+    --
+    + onCreateView(
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
+        )
+    + contienePalabrasSQL(texto: String?): Boolean
+    + refrescarListaDatosBD()
+    + clickActualizar(view: View?)
+    + clickEliminar(view: View?)
+    + clickAlta(view: View?)
+    + clickGenerarPDF(view: View?)
+    + clickConsulta(view: View?)
+    + onClick(view: View)
+    + DatosC(id: Int, nombre: String, primerApellido: String, segundoApellido: String)
+    + onRespuestaRecibida(respuesta: String)
+    + obtenerColorPrincipalDesdeNombre(nombreColor: String): Int
+    + onResume()
+    + obtenerFuenteDesdeNombre(nombreFuente: String?): Typeface
+    + obtenerColorFondoEncabezadosDesdeNombre(nombreColor: String): Int
+}
+
+
+class DatosTarjetasCofrades {
+    + id: Int
+    + nombrecompleto: String
+    --
+    + constructor(id: Int, nombrecompleto: String)
+    + toString(): String
+}
+
+class AdaptadorTarjetasCofrades{
+    - contexto: Context
+    - lista: ArrayList<DatosTarjetasCofrades>
+    - escuchador: View.OnClickListener
+    - fuenteDatos: Typeface
+    - posicionEdicion: Int
+    + elementosSeleccionados: ArrayList<Map<String, String?>>
+    --
+    + toggleSeleccion(position: Int, isChecked: Boolean)
+    + setFuenteDatos(fuenteDatos: Typeface?)
+    + MiContenedor(itemview: View) : RecyclerView.ViewHolder(itemview)
+    + onCreateViewHolder(parent: ViewGroup, viewType: Int): MiContenedor
+    + onClick(view: View)
+    + onBindViewHolder(holder: MiContenedor, position: Int)
+    + getItemCount(): Int
+}
+
+class DAOCofradeTarjetas{
+    - vistaRecycler: RecyclerView
+    - adaptador: AdaptadorTarjetasCofrades
+    - tvSeleccionado_Cabecera: TextView
+    - tvID_Cabecera: TextView
+    - tvNombreCompleto_Cabecera: TextView
+    - et_Buscador_Tarjeta: EditText
+    - tvFeedback: TextView
+    - clienteSSL: ClienteSSL
+    - mainExecutor: Executor
+    + permisoUsuario: Int
+    - colorPrincipal: String
+    - botonGenerarTarjetasSeleccionadas: Button
+    - botonGenerarTodasTarjetas: Button
+    -  botonCancelar: Button
+    - fuenteEncabezados: Typeface
+    - fuenteDatos: Typeface
+    - fuenteFeedback: Typeface
+    - fuenteBotones: Typeface
+    - listaOriginal = ArrayList<DatosTarjetasCofrades>()
+    - listaFiltrada = ArrayList<DatosTarjetasCofrades>()
+    - PERMISSION_REQUEST_CODE_PDF = 456
+    --
+    + onCreate(savedInstanceState: Bundle?)
+    + onClick(v: View)
+    + onRespuestaRecibida(respuesta: String)
+    + clickGenerarPDF(view: View?)
+    + inicializarListaTodosDatosTarjetas(callback: ListaDatosCallback)
+    + algunaFuncionDondeNecesitasGenerarElPDF()
+    + obtenerColorPrincipalDesdeNombre(nombreColor: String): Int
+    + obtenerColorFondoDesdeNombre(nombreColor: String): Int
+    + obtenerFuenteDesdeNombre(nombreFuente: String?): Typeface
+    + refrescarListaDatosBD()
+    + filtrarLista(texto: String)
+    + onResume()
+    +  guardarPdfEnDescargasMediaStore(
+              context: Context,
+              listaDeDatos: MutableList<Map<String, String>>
+          )
+    + abrirPdfUri(context: Context, pdfUri: Uri?)
+    + onListaLista(lista: MutableList<Map<String, String>>)
+}
+
+class MiExecutorTask{
+     - cliente: ClienteSSL
+     - callback: MiExecutorTaskCallback
+     - mainExecutor: Executor
+     - backgroundExecutor: Executor
+     MiExecutorTaskCallback
+     - handler
+    --
+     ejecutar(comando: String)
+     execute(r: Runnable)
+}
+
+class ClienteSSL{
+    respuestaServidor: String
+    - sslSocketFactory: SSLSocketFactory
+    --
+    enviarComandoSync(comando: String): String
+    ClienteTCPCallback
+}
+
+
+interface MiExecutorTaskCallback {
+    + onRespuestaRecibida(respuesta: String)
+}
+
+interface ClienteTCPCallback {
+    + onRespuestaServidor(respuesta: String)
+}
+
+' Relaciones entre clases
+
+' Navegación y estructura principal
+MainActivity *-- MyViewPagerAdapter : "tiene"
+MainActivity ..> MiExecutorTask : "usa"
+MyViewPagerAdapter ..> DAOCofradesFragment : "crea" ' MyViewPagerAdapter crea instancias de fragmentos
+MyViewPagerAdapter ..> DAOCofradeTarjetas : "crea" ' MyViewPagerAdapter crea instancias de fragmentos
+
+' Comunicación Cliente-Servidor
+MiExecutorTask ..> ClienteSSL : "usa"
+ClienteSSL .up.|> ClienteTCPCallback : "implementa" ' Si ClienteSSL implementa la interfaz
+MiExecutorTask .up.|> MiExecutorTaskCallback : "implementa" ' Si MiExecutorTask implementa la interfaz
+
+' Módulos de gestión de Cofrades
+DAOCofradesFragment *-- AdaptadorCofrades : "gestiona"
+DAOCofradesFragment ..> ClienteSSL : "usa"
+DAOCofradesFragment ..> MiExecutorTask : "usa"
+DAOCofradesFragment ..> DatosCofrades : "usa" ' Usa DatosCofrades para la lista
+DAOCofradesFragment ..> DialogoModificarDatosCofrade : "lanza"
+DAOCofradesFragment ..> AltaCofradeActivity : "lanza"
+
+' Módulos de gestión de Tarjetas
+DAOCofradeTarjetas *-- AdaptadorTarjetasCofrades : "gestiona"
+DAOCofradeTarjetas ..> ClienteSSL : "usa"
+DAOCofradeTarjetas ..> MiExecutorTask : "usa"
+DAOCofradeTarjetas "1" o-- "*" DatosTarjetasCofrades : "contiene"
+DAOCofradeTarjetas ..> DatosTarjetasCofrades : "usa"
+
+' Relaciones de datos y UI
+AdaptadorCofrades "1" o-- "*" DatosCofrades : "contiene"
+
+' Relaciones de implementación de callbacks
+MainActivity .up.|> MiExecutorTaskCallback : "implementa" ' Si MainActivity implementa MiExecutorTaskCallback para onRespuestaRecibida
+DAOCofradesFragment .up.|> MiExecutorTaskCallback : "implementa" ' Si DAOCofradesFragment implementa MiExecutorTaskCallback
+DAOCofradeTarjetas .up.|> MiExecutorTaskCallback : "implementa" ' Si DAOCofradeTarjetas implementa MiExecutorTaskCallback
+
+' Si DialogoModificarDatosCofrade.listener es implementado por DAOCofradesFragment
+' Y asumiendo que DatosCofrade en el listener es una INTERFAZ:
+' DialogoModificarDatosCofrade ..> DatosCofrade : "notifica_a"
+' DAOCofradesFragment .up.|> DatosCofrade : "implementa_listener"
+
+top to bottom direction
+
+@enduml

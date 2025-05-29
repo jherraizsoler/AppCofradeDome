@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_camara"
+        android:layout_width="304dp"
+        android:layout_height="304dp"
+        android:layout_marginTop="24dp"
+        android:background="#9D3434"
+        android:backgroundTint="#2D8E14"
+        android:clickable="false"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/qrScannerContainer"
+        android:layout_width="286dp"
+        android:layout_height="284dp"
+        android:background="@color/Color_Principal_Morado"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_camara"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_camara">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvFeedBack"
+        android:layout_width="303dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="28dp"
+        android:autoText="true"
+        android:elegantTextHeight="true"
+        android:freezesText="true"
+        android:text="Comprobación:"
+        android:textAlignment="center"
+        app:autoSizeMaxTextSize="16sp"
+        app:autoSizeMinTextSize="13sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_camara" />
+
+    <Button
+        android:id="@+id/btn_PasarLista"
+        android:layout_width="114dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="12dp"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/qr_code_scanner_24px"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFeedBack" />
+
+    <ImageView
+        android:id="@+id/iv_feedback_incorrecto"
+        android:layout_width="46dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="292dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_incorrecto_round" />
+
+    <ImageView
+        android:id="@+id/iv_feedback_correcto"
+        android:layout_width="47dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="292dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_correcto_round" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
